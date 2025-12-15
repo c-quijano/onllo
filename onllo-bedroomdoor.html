@@ -1,0 +1,110 @@
+
+<!-- my own template for citations (html) -->
+    <!-- ------------------------------- -->
+    <!-- !!!!! code tutorial source: -->
+    <!-- this code is used to... -->
+    
+    <!-- !!!!! end of source code -->
+    <!-- ------------------------------- -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bedroom Door </title>
+    <link rel="stylesheet" href="onllo-style.css">
+</head>
+<body>
+    <header>
+        <h1> BEDROOM DOOR </h1>
+        <!-- blue house shape -->
+            <div class="background">
+                <div id="leftrectangle"> </div>
+                <div id="bottomrectangle"> </div>
+                <div id="rightrectangle"> </div>
+                <div id="lefttriangle"> </div>
+                <div id="righttriangle"> </div>
+            </div>
+            <img class="imgbg" src="images/bg3.jpeg">
+        <!-- logo -->
+            <img id="biglogo" src="images/biglogo.jpeg">
+            <img id="minilogo" src="images/minilogo.jpeg">
+        <!-- layout button -->
+            <button id="layoutbutton"
+                onclick="expandlayoutFunction()">
+                <img id="homeicon" src="icons/homeicon.jpeg">
+            </button>
+        <!-- expanding the layout button -->
+            <div id="expandedlayout">
+                <div class="map-grid-container">
+                    <!-- homepage -->
+                        <div id="gridpoint1">
+                            <button id="homepagebutton">
+                                <a href="onllo-index.html"> 
+                                    <img id="point1" src="icons/point1.jpeg">
+                                    <h2 id="point1name"> Front <br> Door </h2>
+                                </a>
+                            </button>  
+                        </div>
+                    <!-- living room -->
+                        <div id="gridpoint2">
+                            <button id="livingroombutton">
+                                <a href="onllo-livingroom.html"> 
+                                    <img id="point2" src="icons/point2.jpeg">
+                                    <h2 id="point2name"> Living <br> Room </h2>
+                                </a>
+                            </button>                    
+                        </div>
+                    <!-- desk area -->
+                        <div id="gridpoint3">
+                            <button id="deskareabutton">
+                                <a href="onllo-deskarea.html"> 
+                                    <img id="point3" src="icons/point3.jpeg">
+                                    <h2 id="point3name"> Desk <br> Area </h2>
+                                </a>
+                            </button>  
+                        </div>
+                    <!-- closet area -->
+                        <div id="gridpoint4">
+                            <button id="closetareabutton">
+                                <a href="onllo-closetarea.html"> 
+                                    <img id="point4" src="icons/point4.jpeg">
+                                    <h2 id="point4name"> Closet <br> Area </h2>
+                                </a>
+                            </button>     
+                        </div>
+                </div>
+            </div>
+    </header>
+
+    <!-- navigation arrows -->
+        <!-- left arrow -->
+            <div>
+                <button class="arrow" id="leftarrow">
+                    <a href="onllo-deskarea.html"> <img id="arrowicon" src="icons/arrowicon.jpeg"> </a>
+                </button>
+            </div>
+        <!-- right arrow -->
+            <div>
+                <button class="arrow" id="rightarrow">
+                    <a href="onllo-closetarea.html"> <img id="arrowicon" src="icons/arrowicon.jpeg"> </a>
+                </button>
+            </div>
+        <!-- down arrow -->
+            <div>
+                <button class="arrow" id="downarrow">
+                    <a href="onllo-livingroom.html"> <img id="arrowicon" src="icons/arrowicon.jpeg"> </a>
+                </button>
+            </div>
+
+<!-- extra decor -->
+    <div id="extradecor">
+        <img id="lamp" src="images/lamp.jpeg">
+        <img id="leftdoor" src="images/leftdoor.jpeg">
+        <img id="rightdoor" src="images/rightdoor.jpeg">
+    </div>
+
+    <script src="onllo-script.js"> </script>
+</body>
+</html>

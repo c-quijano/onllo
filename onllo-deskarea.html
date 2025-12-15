@@ -1,6 +1,3 @@
- 
-<!-- amazingly useful shortcut to inpupt basic template: [shift/tab] + [!] + [enter] -->
-<!-- in case i forget, the universal comment shortcut is [command] + [/] -->
 
 <!-- my own template for citations (html) -->
     <!-- ------------------------------- -->
@@ -10,27 +7,17 @@
     <!-- !!!!! end of source code -->
     <!-- ------------------------------- -->
 
-<!-- resources i used throughout all my html files:
-    1. all icons are sourced from Google Fonts: https://fonts.google.com/icons?icon.size=24&icon.color=%23000000
-    2. all icons are sourced from Google Fonts: https://fonts.google.com/icons?icon.size=24&icon.color=%23000000
-    3. all images (except logos and palettes) are sourced from Canva.com
-    4. font "Gluten": https://www.freefaces.gallery/typefaces/gluten
-    5. learned to have one button jump to a specific section of a new page: https://stackoverflow.com/questions/17687328/getting-a-link-to-go-to-a-specific-section-on-another-page#:~:text=HTML%20Section%20Linking:%20You%20can%20link%20to,anchor%20tag%2C%20for%20example:%20%60%22click%20me%20%3Cdirectry/filename.html%23section5%3E%22%60.
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> ONLLO </title>
+    <title> Desk Area </title>
     <link rel="stylesheet" href="onllo-style.css">
 </head>
-
 <body>
     <header>
-        <h1> ONLLO </h1>
+        <h1> DESK AREA </h1>
         <!-- blue house shape -->
             <div class="background">
                 <div id="leftrectangle"> </div>
@@ -39,18 +26,15 @@
                 <div id="lefttriangle"> </div>
                 <div id="righttriangle"> </div>
             </div>
-            <img class="imgbg" src="images/bg1.jpeg">
-            
+            <img class="imgbg" src="images/bg4.jpeg">
         <!-- logo -->
             <img id="biglogo" src="images/biglogo.jpeg">
             <img id="minilogo" src="images/minilogo.jpeg">
-        
         <!-- layout button -->
             <button id="layoutbutton"
                 onclick="expandlayoutFunction()">
                 <img id="homeicon" src="icons/homeicon.jpeg">
             </button>
-
         <!-- expanding the layout button -->
             <div id="expandedlayout">
                 <div class="map-grid-container">
@@ -94,23 +78,66 @@
             </div>
     </header>
 
-    <!-- sweater rack -->
-        <section id="sweatersection">
-            <img class="sweaters" id="sweater1" src="images/sweater1.jpeg">
-            <img class="sweaters" id="sweater2" src="images/sweater2.jpeg">
-            <img class="sweaters" id="sweater3" src="images/sweater3.jpeg">
-            <img class="sweaters" id="sweater4" src="images/sweater4.jpeg">
-            <img class="sweaters" id="sweater5" src="images/sweater5.jpeg">
-            <img class="sweaters" id="sweater6" src="images/sweater6.jpeg">
-            <img id="clothingrack" src="images/clothingrack.jpeg">
-        </section>
-
-    <!-- navigation arrows -->
+    <!-- navigation arrow -->
         <div>
             <button class="arrow" id="rightarrow">
-                <a href="onllo-livingroom.html"> <img id="arrowicon" src="icons/arrowicon.jpeg"> </a>
-            </button>  
+                <a href="onllo-bedroomdoor.html"> <img id="arrowicon" src="icons/arrowicon.jpeg"> </a>
+            </button>
         </div>
+
+    <!-- /* living room grid */ -->
+        <!-- -------------------------------------------------------------------------- -->
+        <!-- !!!!! code tutorial source: https://www.w3schools.com/cssref/pr_grid-template-rows.php -->
+        <!-- this code is used to make grids on the page to organize elements better, i'm primarily using it to keep the image buttons separated -->
+        <div class="grid-container">
+            <!-- gallery -->
+                <div id="gridgallery">
+                    <button id="gallery">
+                        <a href="onllo-desk.html#sectiongallery">
+                            <img id="picframes" src="images/picframes.jpeg">
+                            <h2 id="buttontitlepicframes"> Gallery </h2>
+                        </a>
+                    </button>
+                </div>
+            <!-- calendar -->
+                <div id="gridminicalendar">
+                    <button id="seecalendar">
+                        <a href="onllo-desk.html#sectioncalendar">
+                            <img id="minicalendar" src="images/minicalendar.jpeg">
+                            <h2 id="buttontitleminicalendar"> Calendar </h2>
+                        </a>
+                    </button>
+                </div>
+            <!-- add items -->
+                <div id="gridadditems">
+                    <button id="additems">
+                        <a href="onllo-desk.html#sectionadditems">
+                            <img id="bags" src="images/bags.jpeg">
+                            <h2 id="buttontitlebags"> Add <br> Items </h2>
+                        </a>
+                    </button>
+                </div>
+            <!-- music -->
+                <div id="gridmusic">
+                    <button id="music"
+                        onclick="expandmusicFunction()">
+                        <img id="speaker" src="images/speaker.jpeg">
+                        <h2 id="buttontitlespeaker"> Music </h2>
+                    </button>
+                    <!-- opening music-->
+                    <div id="openmusic">
+                        <h2> Music </h2>
+                        <h3> (In V2.0 there will be en editable playlist, or links to YouTube playlists that can be played here) </h3>
+                        <!-- close music -->
+                            <button id="closemusic"
+                                onclick="closemusicFunction()">
+                                <img src="icons/closeicon.jpeg">
+                            </button>
+                    </div>
+                </div>
+        </div>
+        <!-- !!!!! end of source code -->
+        <!-- -------------------------------------------------------------------------- -->
 
     <script src="onllo-script.js"> </script>
 </body>

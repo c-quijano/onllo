@@ -1,1 +1,899 @@
 
+/* my own template for citations (css)
+    /* ------------------------------- */
+    /* !!!!! code tutorial source: */
+    /* this code is used to... */
+    
+    /* !!!!! end of source code */
+    /* ------------------------------- */
+
+/* resources used throughout the code
+    !!! learned "vw" from: https://www.w3schools.com/cssref/css_units.php
+
+    !!! i learned/reviewed about padding from:
+        https://www.w3schools.com/csS/tryit.asp?filename=trycss_padding_sides 
+        and 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/padding
+
+    !!! learned about "margin: auto" from: https://www.w3schools.com/css/css_align.asp
+*/
+
+/* new font declaration */
+    /* ------------------------------- */
+    /* !!!!! code tutorial source: https://www.w3schools.com/css/css3_fonts.asp */
+    /* this code is used to add new fonts to the code*/
+    @font-face {
+        font-family: gluten;
+        src: url(fonts/Gluten-VariableFont_slnt,wght.ttf);
+    }
+    /* !!!!! end of source code */
+    /* ------------------------------- */
+
+/* use this * sparinglyyyy, b/c it's used on the whole page */
+    * {scroll-behavior: smooth;}
+
+/* sections of secondary pages (living, desk, closet) */
+    .sections{
+        background-color: white;
+        padding: 5% 5%;
+        border: 5px solid #bd9149;
+        margin-top: 10vh;
+    }
+
+/* text */
+    h1{
+        color: #a8a47a;
+        font-family: gluten;
+        text-align: center;
+        font-size: 8vw;
+        padding-top: 15vh;
+        margin-top: 0;
+        z-index: 5;
+    }
+    h2{
+        color: #bd9149;
+        font-family: gluten;
+        font-size: 6vw;
+        background-color: white;
+        text-align: center;
+        border-radius: 30%;
+        padding: 5%;
+    }
+    h3{
+        color: #7d1a13;
+        font-family: gluten;
+        margin: 0;
+        font-size: 3vw;
+        text-align: center;
+    }
+
+
+
+
+
+/* link style */
+   /* ------------------------------------------------------ */
+    /* !!!!! code tutorial source: https://www.w3schools.com/css/css_link.asp */
+    /* this code is used to... */
+        a:link{
+            text-decoration: none;
+        }
+        a:active{
+            text-decoration-line: underline;
+            text-decoration-style: wavy;
+            color: #bd9149;
+        }
+        /* i added this part because whenever the button images were pressed, their backgrounds overlapped with the button's border */
+        a:active h2{
+            background-color: transparent;
+            color: #7d1a13;
+        }
+    /* !!!!! end of source code */
+    /* ------------------------------------------------------ */
+
+
+
+
+
+/* background + body*/
+    body{
+        background-color: white;
+        padding: 10vw;
+        z-index: -5;
+    }
+    .background{
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 15;
+    }
+    #leftrectangle{
+        position: absolute;
+        width: 5vw;
+        height: 100vh;
+        background-color: #405166;
+    }
+    #rightrectangle{
+        position: absolute;
+        width: 5vw;
+        height: 100vh;
+        background-color: #405166;
+        left: 95vw;
+    }
+    #bottomrectangle{
+        position: absolute;
+        width: 100vw;
+        height: 5vh;
+        background-color: #405166;
+        top: 95vh;
+    }
+    .imgbg{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -100;
+    }
+    /* ---------------------------------- */
+    /* !!!!! code tutorial source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_shapes_triangle-up */
+    /* this code is used to make the triangle part of the background house shape*/
+        #lefttriangle{
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 0 solid transparent;
+            border-right: 50vw solid transparent;
+            border-top: 30vh solid #405166;
+        }
+        #righttriangle{
+            position: absolute;
+            left: 50vw;
+            width: 0;
+            height: 0;
+            border-left: 50vw solid transparent;
+            border-right: 0 solid transparent;
+            border-top: 30vh solid #405166;
+        }
+    /* !!!!! end of source code */
+    /* ---------------------------------- */
+
+
+
+
+
+/* breakpoints */
+    #biglogo{
+        position: fixed;
+        width: 13vw;
+        top: 5vh;
+        left: 5vw;
+        padding: 0;
+        z-index: 15;
+    }
+    #minilogo{
+        position: fixed;
+        width: 13vw;
+        top: 5vh;
+        left: 5vw;
+        padding: 0;
+        z-index: 15;
+    }
+    @media screen and (min-width: 480px){
+        #biglogo{
+            opacity: 100%;
+        }
+        #minilogo{
+            opacity: 0%;
+        }
+    }
+    @media screen and (max-width: 480px){
+        #biglogo{
+            opacity: 0%;
+        }
+        #minilogo{
+            opacity: 100%;
+        }
+    }
+
+
+
+
+
+/* map/layout */
+    /* layout button */
+        #homeicon{
+            width: 7vw;
+            height: 7vw;
+        }
+        #layoutbutton{
+            border: 3px solid #a8a47a;
+            position: fixed;
+            background-color: transparent;
+            /* no spaces between image and border */
+            padding: 0;
+
+            /* positioning the box */
+                /* "vw" here is used to make the top padding 5% of the window's width, therefore making it the same value as the right padding */
+                top: 5vh;
+                right: 5vw;
+                z-index: 15;
+        }
+        /* i need to redefine the background colour bc otherwise it won't change when hovered */
+        /* ----------------------------------------------- */
+        /* !!!!! code tutorial source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_icon_buttons */
+        /* this code is used to change the appearance of the button when hovered*/
+            #layoutbutton:hover{
+                border: 3px solid #7d1a13;
+                border-radius: 15%;
+                transition: 0.3s ease;
+            }
+        /* !!!!! end of source code */
+        /* ----------------------------------------------- */
+        #layoutbutton:active{
+            border: 3px solid #bd9149;
+            border-radius: 30%;
+            transition: 0.3s ease;
+        }
+    /* expand layout */
+        /* whole area of expanded layout */
+            #expandedlayout{
+                position: fixed;
+                /* uncomment this to make it disappear again when page refreshes */
+                display: none;
+                border: 5px solid #bd9149;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #bd9149;
+                z-index: 17;
+                width: 90vw;
+            }        
+    /* buttons in the map/layout */
+        /* all icons */
+        #point1, #point2, #point3, #point4{
+            height: 15vh;
+            max-width: 90vw;
+            margin: 0;
+        }
+        /* names */
+        #point1name, #point2name, #point3name, #point4name{
+            margin: 0;
+            background-color: transparent;
+        }
+        /* button areas */
+        #homepagebutton, #livingroombutton, #deskareabutton, #closetareabutton{
+            width: 100%;
+            border: 5px solid #bd9149;
+            background-color: white;
+        }
+        /* buttons on hover */
+        #homepagebutton:hover, #livingroombutton:hover, #deskareabutton:hover, #closetareabutton:hover{
+            border: 5px solid #bd9149;
+            border-radius: 15%;
+            transition: 0.3s ease;
+        }
+        /* buttons on active */
+        #homepagebutton:active, #livingroombutton:active, #deskareabutton:active, #closetareabutton:active{
+            border: 5px solid #7d1a13;
+            border-radius: 30%;
+            transition: 0.3s ease;
+        }
+
+
+
+
+
+/* style of the picture buttons on every page */
+    /* living room */
+        #todolist, #fashionidealist, #aboutus, #contactus, #suggesteditems,
+    /* desk area */
+        #gallery, #seecalendar, #additems, #music,
+    /* closet area */
+        #newoutfit, #filterclothes, #futureoutfits
+        {
+            position: relative;
+            padding: 0% 0%;
+            width: 35vw;
+            background: transparent;
+            border-width: 0;
+        }
+    /* buttons on hover */
+        /* the books and flowers' titles also move, the mugs don't, maybe bc they're links and not pop-ups? */
+        #todolist:hover, #fashionidealist:hover, #aboutus:hover, #contactus:hover, #gallery:hover, #seecalendar:hover, #additems:hover, #music:hover, #newoutfit:hover, #filterclothes:hover, #futureoutfits:hover{
+            border: 3px solid #7d1a13;
+            border-radius: 15%;
+            transition: 0.3s ease;
+        }
+    /* buttons on active */
+        #todolist:active, #fashionidealist:active, #aboutus:active, #contactus:active,  #gallery:active, #seecalendar:active, #additems:active, #music:active, #newoutfit:active, #filterclothes:active, #futureoutfits:active{
+            border: 3px solid #bd9149;
+            border-radius: 30%;
+            transition: 0.3s ease;
+        }
+    /* positioning the button images */
+        #todolist, #gallery, #mirror{
+            padding-top: 25vh;
+        }
+        #flowers, #minicalendar, #closet{
+            min-width: 20vw; 
+        }
+        #aboutus, #additems, #suitcase{
+            padding-top: 3vh;
+        }
+    /* general + fit into grid*/
+        /* living room */
+            #books, #flowers, #mug1, #mug2,
+        /* desk area */
+            #picframes, #minicalendar, #bags, #speaker,
+        /* closet area */
+            #mirror, #closet, #suitase
+        {
+            max-width: 25vw;
+        }
+        /* titles/buttons */
+            #buttontitlebooks, #buttontitleflowers, #buttontitlemugs, #buttontitlepicframes, #buttontitleminicalendar, #buttontitlebags, #buttontitlespeaker, #buttontitlemirror, #buttontitlecloset, #buttontitlesuitcase{
+                margin-top: 0;
+            }
+
+
+
+
+
+/* navgation arrow images */
+    /* all arrows */
+        #arrowicon{
+            max-width: 12vw;
+            max-height: 12vh;
+        }
+        .arrow{
+            position: fixed;
+            background-color: #405166;
+            border: 3px solid #a8a47a;
+            z-index: 16;
+            max-width: 15vw;
+            max-height: 12vh;
+        }
+        .arrow:hover {
+            border: 3px solid #7d1a13;
+            border-radius: 15%;
+            transition: 0.3s ease;
+        }
+        .arrow:active{
+            border: 3px solid #bd9149;
+            border-radius: 30%;
+            transition: 0.3s ease;
+        }
+    /* left arrows */
+        #leftarrow{
+            top: 65vh;
+            left: 0;
+            rotate: 90deg;
+        }
+    /* right arrows */
+        #rightarrow{
+            top: 65vh;
+            right: 0;
+            rotate: -90deg;
+        }
+    /* down arrow */
+        #downarrow{
+            bottom: 0;
+            left: 46vw;
+        }
+
+
+
+        
+
+/* specifically for the living room + living */
+    /* pop-up windows (about us, contact us, music(?)) */
+        /* exit button*/
+        #closeaboutus, #closecontactus, #closemusic{
+            position: absolute;
+            top: 2%;
+            right: 2%;
+            padding: 0% 0%;
+            z-index: 3;
+            background-color: transparent;
+            border: 3px solid #a8a47a;
+        }
+        #closeicon{
+            width: 5vw;
+        }
+        #closeaboutus:hover, #closecontactus:hover, #closemusic:hover{
+            border: 3px solid #7d1a13;
+            border-radius: 15%;
+            transition: 0.3s ease;
+        }
+        #closeaboutus:active, #closecontactus:active, #closemusic:active{
+            border: 3px solid #bd9149;
+            border-radius: 30%;
+            transition: 0.3s ease;
+        }
+        
+        /* style of the opened layouts */
+            #openaboutus, #opencontactus, #openmusic{
+                position: fixed;
+                display: none;
+                border: 5px solid #bd9149;
+                width: 75vw;
+                height: 50vh;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10%;            
+                background-color: white;
+                z-index: 4;
+            }
+            #aboutonllo{
+                position: absolute;
+                width: 90%;
+                padding-left: 5%;
+            }
+    /* to-do list */
+        .listitem{
+            width: 90%;
+        }
+
+
+
+
+
+/* specifically for the desk area + desk */
+    /* gallery accordian */
+        /* ------------------------------------------------------------ */
+        /* !!!!! code tutorial source: https://www.w3schools.com/howto/howto_js_accordion.asp#gsc.tab=0 */
+        /* this code is used to style the accordian */
+        .accordion{
+            background-color: #eee;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+        .accordion:hover{
+            border: 3px solid #7d1a13;
+            border-radius: 15%;
+            transition: 0.3s ease;
+        }
+         .accordion:active{
+            border: 3px solid #bd9149;
+            border-radius: 30%;
+            transition: 0.3s ease;
+        }
+        .panel{
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        /* !!!!! end of source code */
+        /* ------------------------------------------------------------ */
+    
+
+
+
+
+    /* calendar and gallery */
+        /* ----------------------------------------------------------------------------------- */
+        /* !!!!! code tutorial source: https://github.com/lange-lange/calendar-user-upload/blob/main/index.html*/
+        /* this code is used to style the dates into boxes and align everything into a grid (i'll go into detail throughout the code)*/
+        /* as always, i changed things up wherever i could to make it more of my own work and not just complete copy+paste*/
+        
+        /* !!! from this source i also specifically learned this and used it in other parts of my code too:
+            -how "transform: translate(-50%, -50%)" helps with centering elements on a page */
+        
+        #calendar{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-top: 20px;
+            color: #7d1a13;
+            font-family: gluten;
+        }
+        #gallery0, #gallery1, #gallery2{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 5px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px){
+            #calendar, #gallery0, #gallery1, #gallery2{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 5px;
+                margin-top: 20px;
+            }
+        }
+        @media (max-width: 375px){
+            #calendar, #gallery0, #gallery1, #gallery2{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 5px;
+                margin-top: 20px;
+            }
+        }
+        .day, .box{
+            border: 3px solid #7d1a13;
+            min-height: 150px;
+            cursor: pointer;
+            position: relative;
+            padding: 5px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+        .day-number{
+            font-weight: bold;
+        }
+        .day img, .box img{
+            max-width: 100%;
+            max-height: 100%;
+            margin-top: 8px;
+            display: block;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        #uploadModal, #galleryUploadModal0, #galleryUploadModal1, #galleryUploadModal2{
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 5px solid #7d1a13;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 10;
+            border-radius: 10%;            
+        }
+        #uploadModal, #galleryUploadModal0, #galleryUploadModal1,  #galleryUploadModal2 input[type="file"]{
+            margin-bottom: 15px;
+        }
+        /* the background of the pop-up window when uploading images */
+            #modalBackdrop, #galleryModalBackdrop0, #galleryModalBackdrop1, #galleryModalBackdrop2{
+                display: none;
+                position: fixed;
+                top:0; left:0; right:0; bottom:0;
+                background: rgba(0,0,0,0.3);
+                z-index: 5;
+            }
+        .calendarbuttons, .gallerybuttons{
+            text-align: center;
+        }
+        /* !!!!! end of source code */
+        /* ----------------------------------------------------------------------------------- */
+
+        .day:hover, .box:hover{
+            border: 3px solid #405166;
+            border-radius: 15%;
+            transition: 0.3s ease;
+            color: #405166;
+        }
+        .day:active, .box:active{
+            border: 3px solid #a8a47a;
+            border-radius: 30%;
+            transition: 0.3s ease;
+            color: #a8a47a;
+        }
+
+
+
+
+
+/* specifically for the closet area + closet */
+    /* ----------------------------------------- */
+    /* !!!!! code tutorial source: https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp */
+    /* this code is used to style the container and the images in it */
+    .new-outfit-container{
+        overflow: auto;
+        white-space: nowrap;
+    }
+    .new-outfit-container img{
+        padding: 10px;
+    }
+    /* !!!!! end of source code */
+    /* ----------------------------------------- */
+
+
+
+
+
+/* page grids */
+    /* -------------------------------------------------------------------------- */
+    /* !!!!! code tutorial source: https://www.w3schools.com/cssref/pr_grid-template-rows.php */
+    /* this code is used to make grids on the page to organize elements better, i'm primarily using it to keep the image buttons separated */
+    
+    /* !!! another grid tutorial used here: https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_breakpoints2 */
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        gap: 7vh;
+        max-width: 80vw;
+        height: 100vh;
+        grid-template-areas:
+        /* living room */
+            'gridtodolist'
+            'gridfashionlist'
+            'gridaboutus'
+            'gridcontactus'
+        /* desk area */
+            'gridgallery'
+            'gridminicalendar'
+            'gridadditems'
+            'gridmusic'
+        /* closet area */
+            'gridnewoutfit'
+            'gridfilterclothes'
+            'gridfutureoutfits';
+    }
+    .grid-container > div{
+        padding-bottom: 8vh;
+    }
+    .map-grid-container{
+        display: grid;
+        grid-template-columns: 35fr 35fr;
+        grid-template-rows: 35fr 35fr;
+        gap: 0fr;
+        grid-template-areas:
+            'gridpoint1'
+            'gridpoint2'
+            'gridpoint3'
+            'gridpoint4';
+    }
+    .map-grid-container > div{
+        padding: 0;
+    }
+    /* grid sections */
+        /* living room */
+            #gridtodolist{
+                grid-area: gridtodolist;
+                position: relative;
+            }
+            #gridfashionlist{
+                grid-area: gridfashionlist;
+                position: relative;
+            }
+            #gridaboutus{
+                grid-area: gridaboutus;
+                position: relative;
+                padding-bottom: 22vh;
+            }
+            #gridcontactus{
+                grid-area: gridcontactus;
+                position: relative;
+            }
+        /* desk area */
+            #gridgallery{
+                grid-area: gridgallery;
+                position: relative;
+            }
+            #gridminicalendar{
+                grid-area: gridminicalendar;
+                position: relative;
+            }
+            #gridadditems{
+                grid-area: gridadditems;
+                position: relative;
+            }
+            #gridmusic{
+                grid-area: gridmusic;
+                position: relative;
+            }
+        /* closet area */
+            #gridnewoutfit{
+                grid-area: gridnewoutfit;
+                position: relative;
+            }
+            #gridfilterclothes{
+                grid-area: gridfilterclothes;
+                position: relative;
+            }
+            #gridfutureoutfits{
+                grid-area: gridfutureoutfits;
+                position: relative;
+            }
+    /* all screens + map points */
+        #gridpoint1{
+            grid-area: gridpoint1;
+            position: relative;
+            grid-area: 2 / 1;
+        }
+        #gridpoint2{
+            grid-area: gridpoint2;
+            position: relative;
+            grid-area: 2 / 2;
+        }
+        #gridpoint3{
+            grid-area: gridpoint3;
+            position: relative;
+            grid-area: 1 / 1;
+        }
+        #gridpoint4{
+            grid-area: gridpoint4;
+            position: relative;
+            grid-area: 1 / 2;
+        }
+    /* screen 1 */
+    @media screen and (min-width: 1024px){
+
+    }
+    /* screen 2 */
+    @media screen and (min-width: 768px){
+        
+    }
+    /* screen 3 */
+    @media screen and (min-width: 600px){
+        
+    }
+    /* screen 4 */
+    @media screen and (min-width: 480px){
+        #gridgallery, #gridtodolist, #gridnewoutfit{
+            grid-area: 1 / 1;
+        }
+        #gridminicalendar, #gridfashionlist, #gridfilterclothes{
+            grid-area: 1 / 2;
+        }
+        #gridadditems, #gridaboutus, #gridfutureoutfits{
+            grid-area: 2 / 1;
+        }
+        #gridmusic, #gridcontactus{
+            grid-area: 2 / 2;
+        }
+    }
+    /* screen 5 */
+    @media screen and (min-width: 320px){
+
+    }
+    /* !!!!! end of source code */
+    /* -------------------------------------------------------------------------- */
+  
+
+
+
+
+/* extra decor */
+    #extradecor{
+        z-index: 0;
+    }
+    /* main page */
+        #sweatersection{
+            position: absolute;
+            width: 85vw;
+            z-index: 5;
+        }
+        .sweaters{
+            width: 25vw;
+            height: auto;
+            z-index: 5;
+            position: absolute;
+        }
+        .sweaters:hover{
+            transform-origin: top center;
+            transform: rotate(15deg); 
+        }
+        #clothingrack{
+            width: 75vw;
+            position: absolute;
+        }
+        /* individual positions */
+            #sweater1{
+                left: 2%;
+                padding-top: 2%;
+            }
+            #sweater2{
+                left: 12%;
+            }#sweater3{
+                left: 22%;
+                padding-top: 2%;
+            }#sweater4{
+                left: 32%;
+                padding-top: 2%;
+            }#sweater5{
+                left: 42%;
+                padding-top: 2%;
+            }#sweater6{
+                left: 52%;
+                padding-top: 3%;
+            }
+    /* living room */
+        #coffeetable{
+            position: fixed;
+            left: 10vw;
+            bottom: 5vh;
+            width: 80vw;
+            height: 50vh;
+            max-width: 80vw;
+            max-height: 50vh;
+        }
+    /* bedroom door */
+        #lamp{
+            position: absolute;
+            height: 50vh;
+            top: 0;
+            left: 33vw;
+            min-width: 30vw;
+            max-width: 45vw;
+        }
+        #leftdoor{
+            height: 50vh;
+            left: 11vw;
+            bottom:0;
+            position: fixed;
+        }
+        #rightdoor{
+            height: 50vh;
+            right: 11vw;
+            bottom:0;
+            position: fixed;
+        }
+
+
+
+
+
+/* check lists */
+    #addtask, #taskinput, .deletetask, #addtask2, #taskinput2, .deletetask2{
+        font-size: 3vw;
+        color: #405166;
+        font-weight: bold;
+    }
+    #tasklist, #tasklist2{
+        font-family: gluten;
+        font-size: 3vw;
+        color: #405166;
+        padding-left: 0;
+    }
+
+
+
+
+/* colour palette carousel */
+    /* ------------------------------------------------------------------------ */
+    /* !!!!! code tutorial source: https://www.youtube.com/watch?v=KD1Yo8a_Qis */
+    /* this code is used to create the moving carousel */
+        .carousel{
+            margin: 100px auto;
+            width: 90%;
+            border: 5px solid #7d1a13;
+            display: flex;
+            overflow-x: auto;
+        }
+        .carousel::-webkit-scrollbar{
+            display: none;
+        }
+        .group{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            padding-right: 1em;
+            animation: spin 15s infinite linear;
+        }
+        .card{
+            flex: 0 0 auto;
+            height: 15vh;
+            width: 15vh;
+            text-align: center;
+            align-content: center;
+        }
+        @keyframes spin{
+            from {translate: 0;}
+            to{translate: -100%;}
+        }
+    /* !!!!! end of source code */
+    /* ------------------------------------------------------------------------ */
+
+    /* !!! i learned how to pause the animation from here: https://www.w3schools.com/cssref/css3_pr_animation-play-state.php */
+    .carousel:hover .group{
+        animation-play-state: paused;   
+    }
+    #palettes{
+        height: 15vh;
+        width: 15vh;
+    }

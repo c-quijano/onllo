@@ -1,6 +1,3 @@
- 
-<!-- amazingly useful shortcut to inpupt basic template: [shift/tab] + [!] + [enter] -->
-<!-- in case i forget, the universal comment shortcut is [command] + [/] -->
 
 <!-- my own template for citations (html) -->
     <!-- ------------------------------- -->
@@ -10,27 +7,16 @@
     <!-- !!!!! end of source code -->
     <!-- ------------------------------- -->
 
-<!-- resources i used throughout all my html files:
-    1. all icons are sourced from Google Fonts: https://fonts.google.com/icons?icon.size=24&icon.color=%23000000
-    2. all icons are sourced from Google Fonts: https://fonts.google.com/icons?icon.size=24&icon.color=%23000000
-    3. all images (except logos and palettes) are sourced from Canva.com
-    4. font "Gluten": https://www.freefaces.gallery/typefaces/gluten
-    5. learned to have one button jump to a specific section of a new page: https://stackoverflow.com/questions/17687328/getting-a-link-to-go-to-a-specific-section-on-another-page#:~:text=HTML%20Section%20Linking:%20You%20can%20link%20to,anchor%20tag%2C%20for%20example:%20%60%22click%20me%20%3Cdirectry/filename.html%23section5%3E%22%60.
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> ONLLO </title>
+    <title> living </title>
     <link rel="stylesheet" href="onllo-style.css">
 </head>
-
 <body>
-    <header>
-        <h1> ONLLO </h1>
+   <header>
         <!-- blue house shape -->
             <div class="background">
                 <div id="leftrectangle"> </div>
@@ -39,8 +25,6 @@
                 <div id="lefttriangle"> </div>
                 <div id="righttriangle"> </div>
             </div>
-            <img class="imgbg" src="images/bg1.jpeg">
-            
         <!-- logo -->
             <img id="biglogo" src="images/biglogo.jpeg">
             <img id="minilogo" src="images/minilogo.jpeg">
@@ -50,7 +34,6 @@
                 onclick="expandlayoutFunction()">
                 <img id="homeicon" src="icons/homeicon.jpeg">
             </button>
-
         <!-- expanding the layout button -->
             <div id="expandedlayout">
                 <div class="map-grid-container">
@@ -92,24 +75,38 @@
                     </div>
                 </div>
             </div>
-    </header>
+   </header>
+            
+    <section class="sections">
+        <h2 style="padding: 0"> To-Do List </h2>
+    <!-- ------------------------------------------------------------------------------------- -->
+    <!-- !!!!! code tutorial source: https://www.youtube.com/watch?v=p6F5TBxs88A -->
+    <!-- this code is used to save and load the list items -->
+        <form id="listarea"> 
+            <input type="text" id="taskinput" placeholder="Add a task">
+            <button id="addtask"> Add </button>
+            <ul id="tasklist"> </ul>
+        </form>
+    </section>
 
-    <!-- sweater rack -->
-        <section id="sweatersection">
-            <img class="sweaters" id="sweater1" src="images/sweater1.jpeg">
-            <img class="sweaters" id="sweater2" src="images/sweater2.jpeg">
-            <img class="sweaters" id="sweater3" src="images/sweater3.jpeg">
-            <img class="sweaters" id="sweater4" src="images/sweater4.jpeg">
-            <img class="sweaters" id="sweater5" src="images/sweater5.jpeg">
-            <img class="sweaters" id="sweater6" src="images/sweater6.jpeg">
-            <img id="clothingrack" src="images/clothingrack.jpeg">
-        </section>
+    <br> 
 
-    <!-- navigation arrows -->
+    <section class="sections" id="scrollfashionlist">
+        <h2 style="padding: 0"> Fashion Idea List </h2>
+        <form id="listarea"> 
+            <input type="text" id="taskinput2" placeholder="Add a task">
+            <button id="addtask2"> Add </button>
+            <ul id="tasklist2"> </ul>
+    <!-- !!!!! end of source code -->
+    <!-- ------------------------------------------------------------------------------------- -->
+        </form>
+    </section>
+
+  <!-- back arrow -->
         <div>
-            <button class="arrow" id="rightarrow">
+            <button class="arrow" id="leftarrow">
                 <a href="onllo-livingroom.html"> <img id="arrowicon" src="icons/arrowicon.jpeg"> </a>
-            </button>  
+            </button>
         </div>
 
     <script src="onllo-script.js"> </script>

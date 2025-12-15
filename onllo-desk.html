@@ -1,0 +1,191 @@
+
+<!-- my own template for citations (html) -->
+    <!-- ------------------------------- -->
+    <!-- !!!!! code tutorial source: -->
+    <!-- this code is used to... -->
+    
+    <!-- !!!!! end of source code -->
+    <!-- ------------------------------- -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> desk </title>
+    <link rel="stylesheet" href="onllo-style.css">
+</head>
+<body>
+    <header>
+        <!-- blue house shape -->
+            <div class="background">
+                <div id="leftrectangle"> </div>
+                <div id="bottomrectangle"> </div>
+                <div id="rightrectangle"> </div>
+                <div id="lefttriangle"> </div>
+                <div id="righttriangle"> </div>
+            </div>
+        <!-- logo -->
+            <img id="biglogo" src="images/biglogo.jpeg">
+            <img id="minilogo" src="images/minilogo.jpeg">
+        <!-- layout button -->
+            <button id="layoutbutton"
+                onclick="expandlayoutFunction()">
+                <img id="homeicon" src="icons/homeicon.jpeg">
+            </button>
+        <!-- expanding the layout button -->
+            <div id="expandedlayout">
+                <div class="map-grid-container">
+                    <!-- homepage -->
+                        <div id="gridpoint1">
+                            <button id="homepagebutton">
+                                <a href="onllo-index.html"> 
+                                    <img id="point1" src="icons/point1.jpeg">
+                                    <h2 id="point1name"> Front <br> Door </h2>
+                                </a>
+                            </button>  
+                        </div>
+                    <!-- living room -->
+                        <div id="gridpoint2">
+                            <button id="livingroombutton">
+                                <a href="onllo-livingroom.html"> 
+                                    <img id="point2" src="icons/point2.jpeg">
+                                    <h2 id="point2name"> Living <br> Room </h2>
+                                </a>
+                            </button>                    
+                        </div>
+                    <!-- desk area -->
+                        <div id="gridpoint3">
+                            <button id="deskareabutton">
+                                <a href="onllo-deskarea.html"> 
+                                    <img id="point3" src="icons/point3.jpeg">
+                                    <h2 id="point3name"> Desk <br> Area </h2>
+                                </a>
+                            </button>  
+                        </div>
+                    <!-- closet area -->
+                        <div id="gridpoint4">
+                            <button id="closetareabutton">
+                                <a href="onllo-closetarea.html"> 
+                                    <img id="point4" src="icons/point4.jpeg">
+                                    <h2 id="point4name"> Closet <br> Area </h2>
+                                </a>
+                            </button>     
+                        </div>
+                </div>
+            </div>
+    </header>
+    <section class="sections" id="sectiongallery">
+        <h2 style="padding: 0"> Gallery </h2>
+        <!-- -------------------------------------------------------------------------------------------- -->
+        <!-- !!!!! code tutorial source: https://www.w3schools.com/howto/howto_js_accordion.asp#gsc.tab=0 -->
+        <!-- this code is used to make accordians so that each part has its own image gallery -->
+        <button class="accordion"> <h3> Top 10 Favourite Outfits </h3> </button>
+        <div class="panel">
+            <!-- the uploading images via localstorage code for all accordians is the same for the calendar, made by chris lange: https://github.com/lange-lange/calendar-user-upload/blob/main/index.html -->
+            <!-- the link to his code is also shown below in the calendar section -->
+            <div id="gallery0"> </div>
+            <div id="galleryModalBackdrop0"> </div>
+            <div id="galleryUploadModal0">
+                <p style="color: white"> Upload Image for <span id="modalBox0"> </span> </p>
+                
+                <!-- centering the buttons -->
+                <div class="gallerybuttons"> 
+                    <input type="file" id="galleryFileInput0" accept="image/*"/>
+                    <br>
+                    <button id="gallerySaveBtn0"> Save Image </button>
+                    <!-- not sure why i need two line breaks for it to work,,, but until i figure out another way, it'll do... -->
+                    <br> <br>
+                    <button id="galleryRemoveBtn0"> Remove Items </button>
+                    <br> <br>
+                    <button id="galleryCancelBtn0"> Cancel </button>
+                </div>
+            </div>        
+        </div>
+
+        <button class="accordion"> <h3> Top 10 Fall Outfits </h3> </button>
+        <div class="panel">
+            <div id="gallery1"> </div>
+            <div id="galleryModalBackdrop1"> </div>
+            <div id="galleryUploadModal1">
+                <p style="color: white"> Upload Image for <span id="modalBox1"> </span> </p>
+                <div class="gallerybuttons"> 
+                    <input type="file" id="galleryFileInput1" accept="image/*"/>
+                    <br>
+                    <button id="gallerySaveBtn1"> Save Image </button>
+                    <br> <br>
+                    <button id="galleryRemoveBtn1"> Remove Items </button>
+                    <br> <br>
+                    <button id="galleryCancelBtn1"> Cancel </button>
+                </div>
+            </div>         
+        </div>
+
+        <button class="accordion"> <h3> Top 10 Winter Outfits </h3> </button>
+        <div class="panel">
+            <div id="gallery2"> </div>
+            <div id="galleryModalBackdrop2"> </div>
+            <div id="galleryUploadModal2">
+                <p style="color: white"> Upload Image for <span id="modalBox2"> </span> </p>
+                <div class="gallerybuttons"> 
+                    <input type="file" id="galleryFileInput2" accept="image/*"/>
+                    <br>
+                    <button id="gallerySaveBtn2"> Save Image </button>
+                    <br> <br>
+                    <button id="galleryRemoveBtn2"> Remove Items </button>
+                    <br> <br>
+                    <button id="galleryCancelBtn2"> Cancel </button>
+                </div>
+            </div>             
+        </div>
+        <!-- !!!!! end of source code -->
+        <!-- -------------------------------------------------------------------------------------------- -->
+    </section>
+
+    <br> 
+
+    <section class="sections" id="sectioncalendar">
+        <h2 style="padding: 0"> Calendar </h2>
+    <!-- --------------------------------------------------------------- -->
+    <!-- !!!!! code tutorial source: https://github.com/lange-lange/calendar-user-upload/blob/main/index.html-->
+    <!-- this code is used to make the buttons appear on the site -->
+    <div id="calendar"> </div>
+    <div id="modalBackdrop"> </div>
+    <div id="uploadModal">
+        <h3> Upload Image for <br> <span id="modalDate"> </span> </h3>
+        <br>
+        <!-- centering the buttons -->
+        <div class="calendarbuttons"> 
+            <input type="file" id="fileInput" accept="image/*"/>
+            <br> <br> 
+            <button id="saveBtn"> Save Image </button>
+            <br> <br>
+            <button id="removeBtn"> Remove Item </button>
+            <br> <br>
+            <button id="cancelBtn"> Cancel </button>
+        </div>
+    </div>
+    <!-- !!!!! end of source code -->
+    <!-- --------------------------------------------------------------- -->
+        
+    </section>
+
+    <br> 
+
+    <section class="sections" id="sectionadditems">
+        <h2 style="padding: 0"> Add Items </h2>
+        <h3> (In V2.0 there will be a general gallery to add and remove all clothing items) </h3>
+    </section>
+
+  <!-- back arrow -->
+        <div>
+            <button class="arrow" id="leftarrow">
+                <a href="onllo-deskarea.html"> <img id="arrowicon" src="icons/arrowicon.jpeg"> </a>
+            </button>
+        </div>
+
+    <script src="onllo-script.js"> </script>
+    <script src="onllo-script2.js"> </script>
+
+</body>
+</html>

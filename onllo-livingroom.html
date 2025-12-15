@@ -1,0 +1,180 @@
+
+<!-- my own template for citations (html) -->
+    <!-- ------------------------------- -->
+    <!-- !!!!! code tutorial source: -->
+    <!-- this code is used to... -->
+    
+    <!-- !!!!! end of source code -->
+    <!-- ------------------------------- -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Living Room </title>
+    <link rel="stylesheet" href="onllo-style.css">
+</head>
+<body>
+   <header>
+        <h1> LIVING ROOM </h1>
+        <!-- blue house shape -->
+            <div class="background">
+                <div id="leftrectangle"> </div>
+                <div id="bottomrectangle"> </div>
+                <div id="rightrectangle"> </div>
+                <div id="lefttriangle"> </div>
+                <div id="righttriangle"> </div>
+            </div>
+            <img class="imgbg" src="images/bg2.jpeg">
+            
+        <!-- logo -->
+            <img id="biglogo" src="images/biglogo.jpeg">
+            <img id="minilogo" src="images/minilogo.jpeg">
+        
+        <!-- layout button -->
+            <button id="layoutbutton"
+                onclick="expandlayoutFunction()">
+                <img id="homeicon" src="icons/homeicon.jpeg">
+            </button>
+
+        <!-- expanding the layout button -->
+            <div id="expandedlayout">
+                <div class="map-grid-container">
+                    <!-- homepage -->
+                    <div id="gridpoint1">
+                        <button id="homepagebutton">
+                            <a href="onllo-index.html"> 
+                                <img id="point1" src="icons/point1.jpeg">
+                                <h2 id="point1name"> Front <br> Door </h2>
+                            </a>
+                        </button>  
+                    </div>
+                    <!-- living room -->
+                    <div id="gridpoint2">
+                        <button id="livingroombutton">
+                            <a href="onllo-livingroom.html"> 
+                                <img id="point2" src="icons/point2.jpeg">
+                                <h2 id="point2name"> Living <br> Room </h2>
+                            </a>
+                        </button>                    
+                    </div>
+                    <!-- desk area -->
+                    <div id="gridpoint3">
+                        <button id="deskareabutton">
+                            <a href="onllo-deskarea.html"> 
+                                <img id="point3" src="icons/point3.jpeg">
+                                <h2 id="point3name"> Desk <br> Area </h2>
+                            </a>
+                        </button>  
+                    </div>
+                    <!-- closet area -->
+                    <div id="gridpoint4">
+                        <button id="closetareabutton">
+                            <a href="onllo-closetarea.html"> 
+                                <img id="point4" src="icons/point4.jpeg">
+                                <h2 id="point4name"> Closet <br> Area </h2>
+                            </a>
+                        </button>     
+                    </div>
+                </div>
+            </div>
+    </header>
+    <!-- navigation arrows -->
+        <!-- left arrow -->
+            <div>
+                <button class="arrow" id="leftarrow">
+                    <a href="onllo-index.html"> <img id="arrowicon" src="icons/arrowicon.jpeg"> </a>
+                </button>
+            </div>
+        <!-- right arrow -->
+            <div>
+                <div>
+                <button class="arrow" id="rightarrow">
+                    <a href="onllo-bedroomdoor.html"> <img id="arrowicon" src="icons/arrowicon.jpeg"> </a>
+                </button>
+            </div>
+
+    <!-- extra decor -->
+        <div id="extradecor">
+            <img id="coffeetable" src="images/coffeetable.jpeg">
+        </div>
+
+    <!-- /* living room grid */ -->
+        <!-- -------------------------------------------------------------------------- -->
+        <!-- !!!!! code tutorial source: https://www.w3schools.com/cssref/pr_grid-template-rows.php -->
+        <!-- this code is used to make grids on the page to organize elements better, i'm primarily using it to keep the image buttons separated -->
+        <div class="grid-container">
+            <!-- to do list -->
+                <div id="gridtodolist">
+                    <button id="todolist">
+                        <a href="onllo-living.html">
+                            <img id="books" src="images/books.jpeg">
+                            <h2 id="buttontitlebooks"> To-Do <br> List </h2>
+                        </a>
+                    </button>
+                </div>
+            <!-- fashion idea list -->
+                <div id="gridfashionlist">
+                    <button id="fashionidealist">
+                        <a href="onllo-living.html#scrollfashionlist">
+                            <img id="flowers" src="images/flowers.jpeg">
+                            <h2 id="buttontitleflowers"> Fashion <br> Idea List </h2>
+                        </a>
+                    </button>
+                </div>
+            <!-- about us -->
+                <div id="gridaboutus">
+                    <button id="aboutus"
+                        onclick="expandaboutusFunction()">
+                        <img id="mug1" src="images/mug1.jpeg">
+                        <h2 id="buttontitlemugs"> About <br> Us </h2>
+                    </button>
+                    <!-- opening about us -->
+                        <div id="openaboutus">
+                            <h2 style="padding: 0"> About Us</h2>
+                            <h3 id="aboutonllo"> 
+                                ONLLO is your wardrobe bestie!
+                                <br> <br>
+                                It's the perfect website to digitalize your closet.
+                                Put together your next best look or organize past favourites.
+                                ONLLO is a fun website :]
+                            </h3>
+                        <!-- close about us -->
+                            <button id="closeaboutus"
+                                onclick="closeaboutusFunction()">
+                                <img id="closeicon" src="icons/closeicon.jpeg">
+                            </button>
+                        </div>
+                </div>
+            <!-- contact us -->
+                <div id="gridcontactus">
+                    <button id="contactus"
+                        onclick="expandcontactusFunction()">
+                        <img id="mug2" src="images/mug2.jpeg">
+                        <h2 id="buttontitlemugs"> Contact <br> Us </h2>
+                    </button>
+                    <!-- opening contact us -->
+                        <div id="opencontactus">
+                            <h2> Contact Us </h2>
+                            <h3>
+                                Email: onllo@gmail.com
+                                <br><br>
+                                Phone: (905)-123-4567
+                                <br><br>
+                                Instagram: @ONLLO
+                            </h3>
+                            <!-- close contact us -->
+                                <button id="closecontactus"
+                                    onclick="closecontactusFunction()">
+                                    <img src="icons/closeicon.jpeg">
+                                </button>
+                        </div>
+                </div>
+        </div>
+        <!-- !!!!! end of source code -->
+        <!-- -------------------------------------------------------------------------- -->
+
+    <script src="onllo-script.js"> </script>
+</body>
+</html>
